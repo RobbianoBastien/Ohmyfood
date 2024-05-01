@@ -127,3 +127,18 @@ body{
         align-self: center;
     }
 }
+
+@media (min-width: 1440px) {
+    .main__color{
+        flex-direction: column;
+        display: flex;
+        background-color: white;
+        align-items: center;
+    }
+    .restaurant__immage{
+        height: 383px;
+    }
+    .menu{
+        width: 70%;
+    }
+}
