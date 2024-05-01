@@ -188,6 +188,7 @@ body {
   }
   .menu {
     width: 70%;
+    margin-bottom: 10px;
   }
 }
 .block {
