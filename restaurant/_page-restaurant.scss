@@ -35,6 +35,7 @@ body{
 .menu{
     display: flex;
     flex-direction: column;
+    position: relative;
     border-radius: 50px 50px 0 0;
     margin-top: -55px;
     padding-top: 30px;
@@ -53,7 +54,59 @@ body{
         font-weight: 400;
         font-size: 28px;
         margin-left: -10px;
+        &__heart1{
+            position: absolute;
+            right: 15%;
+        }
+        &__heart2 {
+            position: absolute;
+            right: 15%;
+            opacity: 0;
+            background: linear-gradient(to bottom,#FF79DA,#9356DC );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            transition: all 0.4s;
+
+            &:hover {
+                opacity: 1;
+              }
+        }
         
+        
+    }
+
+    .menu__title__icon{
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+        height: 70px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        &__heart1{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+        &__heart2 {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            opacity: 0;
+            background: linear-gradient(to bottom,#FF79DA,#9356DC );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            transition: all 0.4s;
+
+            &:hover {
+                opacity: 1;
+              }
+        }
+
     }
     article{
         display: flex;
@@ -128,7 +181,7 @@ body{
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1240px) {
     .main__color{
         flex-direction: column;
         display: flex;
