@@ -16,6 +16,11 @@ body{
     background-color: 
     #F6F6F6;
 }
+button:hover{
+    opacity: 85%;
+    cursor: pointer;
+}
+
 .header{
     display: grid;
         .header__img{
@@ -117,7 +122,8 @@ body{
             font-size: 16px;
             font-weight: 500;
             font-family: "Roboto"; 
-            align-items: center;   
+            align-items: center; 
+            margin-bottom: 20px;  
             span{
                 display: flex;
                 margin-left: -12px;
@@ -218,11 +224,13 @@ body{
                     position: absolute;
                     top: 30px;
                     right: 30px;
+                    padding: 1px 1px;
                 }
                 &__heart2 {
                     position: absolute;
                     top: 30px;
                     right: 30px;
+                    padding: 1px 1px;
                     opacity: 0;
                     background: linear-gradient(to bottom,#FF79DA,#9356DC );
                     background-clip: text;

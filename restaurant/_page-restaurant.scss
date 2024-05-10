@@ -35,17 +35,16 @@ body{
 .menu{
     display: flex;
     flex-direction: column;
-    position: relative;
     border-radius: 50px 50px 0 0;
-    margin-top: -55px;
+    margin-top:-55px;
     padding-top: 30px;
     top: 10px;
-    position: relative;
     background-color: #F6F6F6;
     gap: 40px;
     padding-left: 12.5px;
     padding-right: 12.5px;
     margin-bottom: 50px;
+    z-index: 10;
     &__title{
         display: flex;
         align-items:center;
@@ -53,15 +52,16 @@ body{
         font-family: "Shrikhand";
         font-weight: 400;
         font-size: 28px;
-        margin-left: -10px;
+        padding-left: 20px;
+        padding-right: 20px;
         &__heart1{
             position: absolute;
-            right: 15%;
+            padding: 5px 5px;
         }
         &__heart2 {
             position: absolute;
-            right: 15%;
             opacity: 0;
+            padding: 5px 5px;
             background: linear-gradient(to bottom,#FF79DA,#9356DC );
             background-clip: text;
             -webkit-background-clip: text;
@@ -73,45 +73,19 @@ body{
                 opacity: 1;
               }
         }
-        
+        .relative__heart{
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
         
     }
 
-    .menu__title__icon{
-        display: flex;
-        align-self: center;
-        justify-content: flex-end;
-        height: 70px;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        &__heart1{
-            position: absolute;
-            top: 30px;
-            right: 30px;
-        }
-        &__heart2 {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            opacity: 0;
-            background: linear-gradient(to bottom,#FF79DA,#9356DC );
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            
-            transition: all 0.4s;
-
-            &:hover {
-                opacity: 1;
-              }
-        }
-
-    }
     article{
         display: flex;
         flex-direction: column;
         gap: 12px;
+        opacity: 0;
         h2{
             font-weight: 300;
             font-size: 16px;
@@ -138,10 +112,21 @@ body{
         filter: drop-shadow(0px 4px 15.04px rgb(0,0,0, 0.10));
         padding-top: 10px;
         padding-bottom: 10px;
+        height: 72px;
+        overflow: hidden;
+        &:hover{
+        
+            .checkbox{
+                width: 60px;
+                i{ 
+                    padding-left: 0px;
+                }
+            }
+        }
         &__contente{
             display: flex;
             flex-direction: column;
-            width: 80%;
+            flex-grow: 1;
             padding-left: 10px;
             gap: 5px;
             &__title{
@@ -151,15 +136,52 @@ body{
             &__texte{
                 font-weight: 300;
                 font-size: 15px;
+
             }
         }
     &__price{
         font-weight: 700;
         font-size: 15px;
         align-self: center;
+        padding-right: 50px;
     }
     } 
 }
+
+.fadein1{
+    animation: fadein 0.5s ease-in-out 1s forwards;
+}
+
+.fadein2{
+    animation: fadein 0.5s ease-in-out 1s forwards;
+    animation-delay: 2s;
+}
+
+.fadein3{
+    animation: fadein 0.5s ease-in-out 1s forwards;
+    animation-delay: 3s;
+}
+.checkbox{
+    display: flex;
+    width: 0px;
+    height: 72px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #99E2D0;
+    border-radius: 0px 15px 15px 0px;
+    transition: all 0.4s;
+    i{ 
+        padding-left: 20px;
+        transition: all 0.4s;
+        border-radius: 25px;
+    }
+}
+
+
+
+
 
 .commander{
     display: flex;
@@ -194,5 +216,11 @@ body{
     .menu{
         width: 70%;
         margin-bottom: 10px;
+    }
+}
+
+@keyframes fadein{
+    to{
+        opacity: 1;
     }
 }
