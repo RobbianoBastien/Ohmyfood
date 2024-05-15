@@ -15,6 +15,7 @@ a,a:active,a:visited{
 body{
     background-color: 
     #F6F6F6;
+
 }
 button:hover{
     opacity: 85%;
@@ -112,7 +113,7 @@ button:hover{
         }
     &__button{
             display: flex;
-            min-width: 80%;
+            width: 93%;
             height: 72px;
             background-color: #F6F6F6;
             border-radius: 20px;
@@ -124,6 +125,8 @@ button:hover{
             font-family: "Roboto"; 
             align-items: center; 
             margin-bottom: 20px;  
+            margin-left: 20px;
+            margin-right: 20px;
             span{
                 display: flex;
                 margin-left: -12px;
@@ -291,14 +294,13 @@ button:hover{
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1220px) {
 
     .home__title{
         font-size: 40px;
     }
 
     .fonctionnement{
-        max-width: 1440px;
         padding: 50px 180px;
     }
     .fonctionnement__buttons{
@@ -315,6 +317,7 @@ button:hover{
     .fonctionnement__button{
         min-width: inherit;
         flex: 1;
+        align-items: center;
     }
     
 
@@ -348,6 +351,49 @@ button:hover{
     }
 } 
 
+
+/* loader de la page home */
+
+.hide{
+    opacity: 0;
+    animation: home__loading 0.5s ease-in-out 1s forwards;
+    position: relative;
+    animation-delay: 3s;
+
+}   
+
+@keyframes home__loading{
+    to{
+        opacity: 1;
+    }
+}
+
+.hide__loader{
+    animation: fadeout 3s step-end forwards;
+}
+.loader {
+    border: 16px solid #99E2D0; 
+    border-top: 16px solid #9356DC;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes fadeout {
+    to{
+        opacity: 0;
+    }
+  }
 
 
 
