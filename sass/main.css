@@ -100,12 +100,13 @@ body {
 .menu__title {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   font-family: "Shrikhand";
   font-weight: 400;
   font-size: 28px;
   padding-left: 20px;
   padding-right: 20px;
+  gap: 20px;
 }
 .menu__title__heart1 {
   position: absolute;
@@ -179,10 +180,16 @@ body {
 .menu__carde__contente__title {
   font-weight: 500;
   font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__carde__contente__texte {
   font-weight: 300;
   font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__carde__price {
   font-weight: 700;
@@ -539,12 +546,13 @@ button:hover {
   margin: 0px;
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 992px) {
   .home__title {
     font-size: 40px;
   }
-  .fonctionnement {
-    padding: 50px 180px;
+  .fonctionnement__desktop {
+    max-width: 1050px;
+    margin: auto;
   }
   .fonctionnement__buttons {
     display: flex;
@@ -563,7 +571,8 @@ button:hover {
   .restaurant {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 30px 180px;
+    max-width: 1050px;
+    margin: auto;
     gap: 28px;
   }
   .restaurant__title {
