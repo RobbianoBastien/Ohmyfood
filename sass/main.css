@@ -626,7 +626,7 @@ button:hover {
   position: absolute;
   z-index: 10;
   top: 50%;
-  left: 50%;
+  left: 45%;
 }
 
 @keyframes spin {
